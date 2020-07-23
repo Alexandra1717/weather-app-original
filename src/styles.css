@@ -1,0 +1,157 @@
+body {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+h1 {
+  color: rgb(38, 127, 143);
+  text-align: center;
+  font-family: "Lobster", cursive;
+  margin: 25px;
+}
+
+.city {
+  font-family: Lobster;
+  font-size: 50px;
+  color: rgb(36, 144, 172);
+  margin: 50px;
+  text-transform: capitalize;
+}
+
+.place {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.fix {
+  position: relative;
+  right: -600px;
+  top: -65px;
+}
+
+img {
+  width: 65px;
+  margin: 7px;
+}
+
+.container {
+  margin: 0px;
+  text-align: center;
+  position: relative;
+  bottom: 175px;
+  left: 45px;
+}
+p {
+  font-style: italic;
+  font-size: 20px;
+  color: #356bb6;
+  left: 30px;
+  position: relative;
+  padding: 3px;
+}
+.column {
+  position: relative;
+  right: 15px;
+  left: 700px;
+  bottom: 375px;
+  width: 300px;
+  font-size: 30px;
+  color: #583c97c0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border: 1px solid rgb(206, 206, 228);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(37, 39, 89, 0.5);
+  text-align: center;
+  padding: 30px;
+}
+
+.now {
+  font-family: Lobster;
+  font-size: 45px;
+  color: rgb(27, 64, 112);
+  position: relative;
+  left: 25px;
+}
+
+#time {
+  position: relative;
+  left: -75px;
+  font-size: 35px;
+  color: rgb(52, 149, 167);
+  border: 1px solid rgb(206, 206, 228);
+  width: 300px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(37, 39, 89, 0.5);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+#celsius {
+  color: rgb(25, 55, 107);
+}
+
+#fahrenheit {
+  color: rgb(25, 55, 107);
+}
+
+.degrees {
+  font-family: Lobster;
+  font-size: 47px;
+  color: rgb(27, 64, 112);
+  position: relative;
+  left: 75px;
+  bottom: 75px;
+}
+
+.extras {
+  position: relative;
+  bottom: 55px;
+  font-size: 27px;
+  left: -55px;
+}
+
+.location-button {
+  color: rgb(55, 169, 173);
+  border-radius: 5px;
+  background-color: #dcd9d4;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px solid rgb(201, 201, 235);
+  position: relative;
+  right: 150px;
+  top: 25px;
+  left: 100px;
+  width: 300px;
+  font-size: 30px;
+  box-shadow: 0px 5px 5px 0px rgba(37, 39, 89, 0.5);
+}
+
+.location-button:hover {
+  background-blend-mode: #583c97c0;
+  transition: all 200ms, ease-in-out;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.weather-app {
+  padding: 30px;
+  border: 1px solid rgba(148, 136, 219, 0.678);
+  border-radius: 5px;
+  margin: 50px 175px 50px 175px;
+  box-shadow: rgba(45, 37, 89, 0.932);
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    to top,
+    #d5d4d0 0%,
+    #d5d4d0 1%,
+    #eeeeec 31%,
+    #efeeec 75%,
+    #e9e9e7 100%
+  );
+}

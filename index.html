@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@1,700&display=swap');
+        </style>
+    <script
+      src="https://kit.fontawesome.com/ceea2f9320.js"
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="src/styles.css" />
+    </head>
+  <body>
+    <h1>Welcome to the Weather App</h1>
+    <form id = "enter-city">
+    <div class="weather-app">
+      <div class="weather-app-wrapper">
+      <div class="form-group place">
+        <input
+          type="username"
+          placeholder="Enter city here..."
+          class="form-control";
+          autofocus="on";
+          autocomplete="off";
+          id = "input-city"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary fix">Go</button>
+    <button class = "location-button">Current Location</button>
+    </form>
+    <div class="city">
+      <span id="display-city">New York</span>
+      <img src="media/cloudy.png"></div>
+      <p id="time"></p>
+      <div class = "now" id = "temperature" > 22 </div>
+      <a href ="#" id ="celsius" class="degrees"> &degC</a>
+       <p class="extras">
+      Sunrise: 5:24am<br/>
+      Partly cloudy
+      </p>
+    </div>
+    <div class="column">
+    <div class="row">
+      <div class="row-6">Min :<span id="min-temp"></span>&deg</div>
+      <div class="row-6">Wind-speed:<span id="wind-speed"></span> mph</div>
+      <div class="row-6">Humidity :<span id="humidity"></span> %</div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col-2">Monday  
+          <img src="media/sun.png">Max 27&deg Min 23&deg
+        </div>
+        <div class="col-2">Tuesday
+          <img src="media/cloudy.png">
+          Max 24&deg<br/> Min 19&deg
+        </div>
+        <div class="col-2">Wednesday
+          <img src="media/rainbow.png">
+          Max 28&deg<br/> Min 25&deg
+        </div>
+        <div class="col-2">Thursday
+          <img src="media/rain.png">
+          Max 25&deg<br/> Min 23&deg
+        </div>
+        <div class="col-2">Friday
+          <img src="media/umbrella.png">
+          Max 22&deg Min 17&deg
+        </div>
+      </div>
+        <hr/>
+      <small> <a href="https://github.com/Alexandra1717/vanilla-weather-app-original">Open source code</a> by Alexandra Negrea</small>
+     </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
