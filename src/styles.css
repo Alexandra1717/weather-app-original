@@ -68,8 +68,8 @@ p {
 
 .now {
   font-family: Lobster;
-  font-size: 45px;
-  color: rgb(27, 64, 112);
+  font-size: 75px;
+  color: rgb(88, 23, 110);
   position: relative;
   left: 25px;
 }
@@ -89,21 +89,20 @@ p {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
-#celsius {
-  color: rgb(25, 55, 107);
-}
-
-#fahrenheit {
-  color: rgb(25, 55, 107);
-}
 
 .degrees {
   font-family: Lobster;
-  font-size: 47px;
-  color: rgb(27, 64, 112);
+  font-size: 32px;
   position: relative;
-  left: 75px;
+  left: 135px;
   bottom: 75px;
+  top: -100px;
+  color: #265c75;
+  cursor: default;
+}
+
+.degrees:hover{
+  text-decoration: none;
 }
 
 .extras {
