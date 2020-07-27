@@ -22,6 +22,20 @@ function formatDate(date) {
 let realHours = document.querySelector("#time");
 realHours.innerHTML = formatDate(currentHours);
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+
 //Show city & temperature
 
 function showTemp(response) {
@@ -61,6 +75,46 @@ celsius.addEventListener("click", showCelsius);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheit);
 
+function displayForecast(response) {
+  console.log(response);
+  let forecastEl = document.querySelector("#forecast");
+  forecast = response.data.list[0];
+  forecastEL.innerHTML = `<div class="container" id="forecast">
+        <div class="row">
+        <div class="col-2">${forecast.dt} 
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png">Max ${Math.round(
+    forecast.main.temp_max
+  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
+        </div>
+        </div>`;
+
+  forecast = response.data.list[1];
+  forecastEL.innerHTML = `<div class="container" id="forecast">
+        <div class="row">
+        <div class="col-2">${forecast.dt} 
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png">Max ${Math.round(
+    forecast.main.temp_max
+  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
+        </div>
+        </div>`;
+
+  forecast = response.data.list[2];
+  forecastEL.innerHTML = `<div class="container" id="forecast">
+        <div class="row">
+        <div class="col-2">${forecast.dt} 
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png">Max ${Math.round(
+    forecast.main.temp_max
+  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
+        </div>
+        </div>`;
+}
+
 function showCity() {
   let city = document.querySelector("#input-city");
   let display = document.querySelector("#display-city");
@@ -68,6 +122,9 @@ function showCity() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   display.innerHTML = `${city.value}`;
   axios.get(apiUrl).then(showTemp);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let show = document.querySelector("#enter-city");
