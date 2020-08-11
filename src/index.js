@@ -46,6 +46,8 @@ function showTemp(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -53,6 +55,12 @@ function showTemp(response) {
     response.data.main.temp_min
   );
   celsiusTemp = response.data.main.temp;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showFahrenheit(event) {
@@ -79,43 +87,69 @@ function displayForecast(response) {
   console.log(response);
   let forecastEl = document.querySelector("#forecast");
   forecast = response.data.list[0];
-  forecastEL.innerHTML = `<div class="container" id="forecast">
-        <div class="row">
-        <div class="col-2">${forecast.dt} 
-          <img src="http://openweathermap.org/img/wn/${
-            forecast.weather[0].icon
-          }@2x.png">Max ${Math.round(
-    forecast.main.temp_max
-  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
-        </div>
+  forecastEl.innerHTML = `<div class="col-2">
+  <h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+        <img src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png">
+    Max ${Math.round(forecast.main.temp_max)}&deg Min ${Math.round(
+    forecast.main.temp_min
+  )}&deg
         </div>`;
 
   forecast = response.data.list[1];
-  forecastEL.innerHTML = `<div class="container" id="forecast">
-        <div class="row">
-        <div class="col-2">${forecast.dt} 
+  forecastEl.innerHTML += `<div class="col-2"><h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+        
           <img src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
-          }@2x.png">Max ${Math.round(
+          }@2x.png"> Max ${Math.round(
     forecast.main.temp_max
-  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
-        </div>
+  )}° Min ${Math.round(forecast.main.temp_min)}&deg
         </div>`;
 
   forecast = response.data.list[2];
-  forecastEL.innerHTML = `<div class="container" id="forecast">
-        <div class="row">
-        <div class="col-2">${forecast.dt} 
+  forecastEl.innerHTML += `<div class="col-2"><h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+        
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png"> Max ${Math.round(
+    forecast.main.temp_max
+  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
+        </div>`;
+
+  forecast = response.data.list[3];
+  forecastEl.innerHTML += `<div class="col-2"><h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+        
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png"> Max ${Math.round(
+    forecast.main.temp_max
+  )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
+        </div>`;
+
+  forecast = response.data.list[4];
+  forecastEl.innerHTML += `<div class="col-2"><h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+        
           <img src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png">Max ${Math.round(
     forecast.main.temp_max
   )}&deg Min ${Math.round(forecast.main.temp_min)}&deg
-        </div>
         </div>`;
 }
 
-function showCity() {
+function showCity(event) {
+  event.preventDefault();
   let city = document.querySelector("#input-city");
   let display = document.querySelector("#display-city");
   let apiKey = `39ba6876bb8a1587562befd26765e6ab`;
@@ -123,7 +157,7 @@ function showCity() {
   display.innerHTML = `${city.value}`;
   axios.get(apiUrl).then(showTemp);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
