@@ -2,6 +2,7 @@ body {
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
+
 h1 {
   color: rgb(38, 127, 143);
   text-align: center;
@@ -11,7 +12,7 @@ h1 {
 
 .city {
   font-family: Lobster;
-  font-size: 50px;
+  font-size: 55px;
   color: rgb(36, 144, 172);
   margin: 50px;
   text-transform: capitalize;
@@ -19,13 +20,14 @@ h1 {
 
 .place {
   position: relative;
-  width: 100%;
+  width: 75%;
   padding-right: 15px;
   padding-left: 15px;
+  left: 75px;
 }
 .fix {
   position: relative;
-  right: -600px;
+  right: -520px;
   top: -65px;
 }
 
@@ -34,13 +36,6 @@ img {
   margin: 7px;
 }
 
-.container {
-  position: relative;
-  text-align: center;
-  bottom: 175px;
-  left: -45px;
-  font-size: 18px;
-}
 p {
   font-style: italic;
   font-size: 20px;
@@ -73,21 +68,6 @@ p {
   left: 25px;
 }
 
-#time {
-  position: relative;
-  left: -75px;
-  font-size: 35px;
-  color: rgb(52, 149, 167);
-  border: 1px solid rgb(206, 206, 228);
-  width: 300px;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-weight: bold;
-  border-radius: 15px;
-  box-shadow: 0px 5px 5px 0px rgba(37, 39, 89, 0.5);
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
-
 .degrees {
   font-family: Lobster;
   font-size: 32px;
@@ -101,13 +81,6 @@ p {
 
 .degrees:hover {
   text-decoration: none;
-}
-
-.extras {
-  position: relative;
-  bottom: 55px;
-  font-size: 27px;
-  left: -55px;
 }
 
 .location-button {
@@ -155,4 +128,22 @@ p {
 
 #description{
   text-transform: capitalize;
+  left: 30px;
+  bottom:35px;
+  font-size: 32px;
+  color:rgb(82, 15, 82);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-primary{
+  font-size:28px;
+  font-family:'Times New Roman', Times, serif ;
+}
+
+.card{
+  left: -45px;
+}
+
+#time:{
+  font-size: 28px;
 }

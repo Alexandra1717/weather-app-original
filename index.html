@@ -37,32 +37,39 @@
     <button type="submit" class="btn btn-primary fix">Go</button>
     <button class = "location-button">Current Location</button>
     </form>
-    <div class="city">
+      <div class="city">
       <span id="display-city">New York</span>
       <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="broken clouds" id="icon" class="float-left">
       </div>
-    <div class="row">
-      <div class="row-6">
-        <p id="time"></p>
-      <div class = "now" id = "temperature" > 22 </div>
-      <a href ="#" id ="celsius" class="degrees"> &degC /</a><a href="#" id="fahrenheit" class="degrees">&degF</a>
-      <p class="extras" id="description">
-         Partly cloudy
-      </p>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-info">
+        <div class="card-body">
+          <h5 class="card-title text-primary"><p id="time"></p>
+          <div class="now" id="temperature"> 22 </div>
+          <a href="#" id="celsius" class="degrees"> &degC /</a><a href="#" id="fahrenheit" class="degrees">&degF</a>
+          <p class="" >
+          </p></h5>
+          <p class="card-text"id="description">Partly cloudy</p>
+        </div>
       </div>
     </div>
-      <div class="column">
-      <div class="windy">
-      <div class="row-6">Min :<span id="min-temp"></span>&deg</div>
-      <div class="row-6">Wind-speed:<span id="wind-speed"></span> mph</div>
-      <div class="row-6">Humidity :<span id="humidity"></span> %</div>
-     </div>
-    </div>
-    <div class="container">
-        <div class="row" id="forecast">
-        <div class="col-2" >2:00 
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" >Max 33&deg Min 33&deg
+    <div class="col-md-6">
+      <div class="card border-info">
+        <div class="card-body text-primary"><h5 class="card-title">Currently</h5>
+         <p class="card-text"><div class="row-6">Min :<span id="min-temp"></span>&deg</div>
+          <div class="row-6">Wind-speed:<span id="wind-speed"></span> mph</div>
+          <div class="row-6">Humidity :<span id="humidity"></span> %</div>
+          </p>
         </div>
+      </div>
+    </div>
+  </div>
+</br>
+        <div class="row" id="forecast">
+          <div class="col-2">2:00
+            <img src="http://openweathermap.org/img/wn/10d@2x.png">Max 33&deg Min 33&deg
+          </div>
         <div class="col-2">5:00
           <img src="http://openweathermap.org/img/wn/03n@2x.png">
           Max 30&deg<br /> Min 30&deg
@@ -79,8 +86,8 @@
           <img src="http://openweathermap.org/img/wn/03d@2x.png">
           Max 32&deg Min 32&deg
         </div>
-        </div>
-    </div>
+      </div>
+</div>
         <hr/>
       <small> <a href="https://github.com/Alexandra1717/weather-app-original"  target="blank">Open source code </a> by Alexandra Negrea</small>
      </div>
