@@ -25,6 +25,7 @@ h1 {
   padding-left: 15px;
   left: 75px;
 }
+
 .fix {
   position: relative;
   right: -520px;
@@ -130,6 +131,6 @@ p {
   left: -45px;
 }
 
-#time:{
-  font-size: 28px;
+#time{
+  font-size: 24px;
 }
